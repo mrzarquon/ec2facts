@@ -45,9 +45,9 @@ module Facter
 
     class Metadata < Base
 
-      DEFAULT_URI = "http://169.254.169.254/latest/meta-data/"
+      EC2_DEFAULT_URI = "http://169.254.169.254/latest/meta-data/"
 
-      def initialize(uri = DEFAULT_URI)
+      def initialize(uri = EC2_DEFAULT_URI)
         @baseurl = uri
       end
 
@@ -109,9 +109,9 @@ module Facter
     end
 
     class Userdata < Base
-      DEFAULT_URI = "http://169.254.169.254/latest/user-data/"
+      EC2_DEFAULT_URI = "http://169.254.169.254/latest/user-data/"
 
-      def initialize(uri = DEFAULT_URI)
+      def initialize(uri = EC2_DEFAULT_URI)
         @baseurl = uri
       end
 
